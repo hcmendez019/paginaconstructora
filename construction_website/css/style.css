@@ -1,59 +1,219 @@
 /* Basic styles for the construction company website */
 
+/* General Resets and Defaults */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+    color: #333; /* Default heading color */
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #337ab7; /* Standard link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+ul, ol {
+    margin-bottom: 1em;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Header and Navigation */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #2c3e50; /* Dark blue-grey */
+    color: #ecf0f1; /* Light grey text */
     padding: 1em 0;
-    text-align: center;
+    border-bottom: 3px solid #e74c3c; /* Accent color */
 }
 
-nav ul {
+header nav {
+    display: flex;
+    justify-content: center; /* Center navigation items */
+}
+
+header nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
     margin-right: 20px;
 }
 
-nav ul li a {
-    color: #fff;
+header nav ul li a {
+    color: #ecf0f1;
     text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
+header nav ul li a:hover,
+header nav ul li a.active { /* Style for active page link */
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Main Content Area */
+main {
+    padding-top: 20px; /* Space below header */
+    padding-bottom: 80px; /* Space above footer, assuming footer is around 60px height */
+    min-height: calc(100vh - 180px); /* Attempt to keep footer down, adjust based on header/footer height */
+}
+
+/* Hero Section Specifics (from original) */
 #hero {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
+    background-color: #3498db; /* Brighter blue */
+    color: #fff;
+    padding: 60px 20px;
     text-align: center;
 }
 
 #hero h1 {
     margin-bottom: 20px;
+    font-size: 2.8em;
+    color: #fff;
 }
 
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* CTA Button (Call to Action) */
 .cta-button {
     display: inline-block;
-    background-color: #333;
+    background-color: #e74c3c; /* Accent color */
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-footer {
-    background-color: #333;
+.cta-button:hover {
+    background-color: #c0392b; /* Darker accent */
+    text-decoration: none;
     color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Sections (general styling for sections like about, services, etc.) */
+section {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    background-color: #fff; /* White background for content sections */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 { /* Styling for main headings within sections */
     text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
+    margin-bottom: 30px;
+    color: #2c3e50; /* Dark blue-grey for section titles */
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50; /* Dark blue-grey */
+    color: #ecf0f1; /* Light grey text */
+    text-align: center;
+    padding: 20px 0;
+    /* Removed position: fixed to allow natural flow */
+    /* width: 100%; // Not needed if not fixed */
+    border-top: 3px solid #e74c3c; /* Accent color */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Specific page section styling if needed */
+#services-overview, #project-showcase,
+#company-history, #mission-vision, #team-members,
+#services-offered, #portfolio-gallery, #contact-form-section, #contact-details,
+#blog-posts, #login-section, #register-section, #admin-content {
+    padding: 20px; /* Add padding inside sections */
+}
+
+.team-member, .service-item, .project-item, .blog-post-preview {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+/* Basic form styling */
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="password"],
+form textarea {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form button[type="submit"] {
+    /* Using .cta-button style by default if it has that class */
+    /* Or define specific submit button styles here */
+    cursor: pointer;
 }
