@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Construction Company</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add specific admin styles if needed later, e.g., admin_style.css -->
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Simplified nav for admin, or could be a different admin-specific nav -->
+            <ul>
+                <li><a href="index.html">View Website</a></li>
+                <li><a href="admin_dashboard.html?section=users">Manage Users</a></li>
+                <li><a href="admin_dashboard.html?section=projects">Manage Projects</a></li>
+                <li><a href="admin_dashboard.html?section=blog">Manage Blog Posts</a></li>
+                <li><a href="logout.php">Logout</a></li> <!-- Placeholder for logout -->
+            </ul>
+        </nav>
+    </header>
+
+    <main id="admin-content">
+        <h1>Admin Dashboard</h1>
+
+        <section id="manage-users">
+            <h2>User Management</h2>
+            <p>Placeholder for user management tools: list users, edit user roles, delete users, etc.</p>
+            <!-- Example: <a href="admin_dashboard.php?action=add_user">Add New User</a> -->
+        </section>
+
+        <section id="manage-projects">
+            <h2>Project Management</h2>
+            <p>Placeholder for project management tools: add new projects, edit existing projects, upload project images, etc.</p>
+            <!-- Example: <a href="admin_dashboard.php?action=add_project">Add New Project</a> -->
+        </section>
+
+        <section id="manage-blog">
+            <h2>Blog Post Management</h2>
+            <p>Placeholder for blog post management tools: create new posts, edit posts, delete posts, manage comments (if applicable).</p>
+            <!-- Example: <a href="admin_dashboard.php?action=add_blog_post">Create New Blog Post</a> -->
+        </section>
+
+        <!-- Depending on the '?section=' query param, JavaScript could show/hide relevant sections -->
+        <!-- Or, this could be handled by a backend templating engine -->
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Construction Company - Admin Panel</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <!-- Add specific admin scripts if needed later, e.g., admin_script.js -->
+</body>
+</html>
